@@ -25,8 +25,9 @@ export default {
     year: Number,
   },
   methods: {
-    add: () => {
-      console.log("button clicked");
+    add: function () {
+      // Emitindo um evento "addNewGame", que será ouvido pelo parent (App)
+      this.$emit("addNewGame", { name: this.name, year: this.year });
     },
   },
 };
