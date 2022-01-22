@@ -26,9 +26,20 @@ import Info from "./components/Info.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Info,
+    GameList,
+    GameForm,
+  },
+  data: function () {
+    return {
+      appData: {
+        title: "VideoGames history List",
+        description: "A list with videogames and the release date",
+      },
+      gameList: [{ id: 1, name: "Mario Bros", year: 1985 }],
+    };
+  },
+};
 </script>
 
 <style>
