@@ -7,6 +7,7 @@
       name="name"
       id="name"
       placeholder="name"
+      required
     />
     <input
       type="text"
@@ -14,6 +15,7 @@
       name="year"
       id="year"
       placeholder="year"
+      required
     />
     <input type="submit" value="Add" />
   </form>
