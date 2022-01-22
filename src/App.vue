@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <img
-      src="./assets/game.png"
-      alt="an game logo"
-      width="50px"
-      height="50px"
-    />
+    <img src="./assets/game.png" alt="joystick logo" />
     <Info v-bind:infoData="appData" />
     <ol>
       <game-list
@@ -47,6 +42,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #1c2731;
+}
+img {
+  width: 3rem;
+  height: 3rem;
 }
 </style>
