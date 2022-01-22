@@ -44,7 +44,11 @@ export default {
         title: "VideoGames history List",
         description: "A list with videogames and the release date",
       },
-      gameList: [{ id: 1, name: "Mario Bros", year: 1985 }],
+      gameList: [
+        { id: 1, name: "Mario Bros", year: 1983 },
+        { id: 2, name: "Mario Bros 2", year: 1988 },
+        { id: 3, name: "Mario Bros 3", year: 1988 },
+      ],
     };
   },
 };
