@@ -1,5 +1,6 @@
 <template>
   <form name="newGame" v-on:submit.prevent="add" autocomplete="off">
+    <span>Add a new game data:</span>
     <input
       type="text"
       v-model="name"
@@ -14,7 +15,7 @@
       id="year"
       placeholder="year"
     />
-    <button type="submit">Add</button>
+    <input type="submit" value="Add" />
   </form>
 </template>
 
