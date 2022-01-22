@@ -1,22 +1,8 @@
 <template>
   <form name="newGame" v-on:submit.prevent="add" autocomplete="off">
     <span>Add a new game data:</span>
-    <input
-      type="text"
-      v-model="name"
-      name="name"
-      id="name"
-      placeholder="name"
-      required
-    />
-    <input
-      type="text"
-      v-model="year"
-      name="year"
-      id="year"
-      placeholder="year"
-      required
-    />
+    <input type="text" name="name" id="name" placeholder="name" required />
+    <input type="text" name="year" id="year" placeholder="year" required />
     <input type="submit" value="Add" />
   </form>
 </template>
@@ -29,8 +15,12 @@ export default {
   },
   methods: {
     add: function () {
+      const form = document.forms.newGame;
       // Emitindo um evento "addNewGame", que será ouvido pelo parent (App)
-      this.$emit("addNewGame", { name: this.name, year: this.year });
+      this.$emit("addNewGame", {
+        name: form.name.value,
+        year: form.year.value,
+      });
     },
   },
 };
