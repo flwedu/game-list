@@ -1,15 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img
+      src="./assets/game.png"
+      alt="an game logo"
+      width="50px"
+      height="50px"
+    />
+    <Info v-bind:infoData="appData" />
+    <ol>
+      <game-list
+        v-for="elem in gameList"
+        v-bind:key="elem.id"
+        v-bind:game="elem"
+      ></game-list>
+    </ol>
+    <game-form />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GameForm from "./components/GameForm.vue";
+import GameList from "./components/GameList.vue";
+import Info from "./components/Info.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld
   }
