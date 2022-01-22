@@ -9,7 +9,11 @@
         v-bind:game="elem"
       ></game-list>
     </ol>
-    <game-form />
+    <!-- 
+      Criando um componente de formulário e ouvindo seu evento "addNewGame"
+      Também pode ser representado por @addNewGame="addNewGame"
+     -->
+    <game-form v-on:addNewGame="addNewGame" />
   </div>
 </template>
 
@@ -24,6 +28,15 @@ export default {
     Info,
     GameList,
     GameForm,
+  },
+  methods: {
+    addNewGame: function (game) {
+      // This method add a game to list
+      this.gameList.push({
+        id: this.gameList.length + 1,
+        ...game,
+      });
+    },
   },
   data: function () {
     return {
