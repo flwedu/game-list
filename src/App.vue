@@ -41,7 +41,7 @@ export default {
   data: function () {
     return {
       appData: {
-        title: "VideoGames history List",
+        title: "Videogames History List",
         description: "A list with videogames and the release date",
       },
       gameList: [
