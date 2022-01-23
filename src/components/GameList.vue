@@ -1,7 +1,7 @@
 <template>
   <ol>
     <li v-for="game in games" :key="game.id">
-      {{ game.name }}, released in {{ game.year }}
+      "{{ game.name }}", released in {{ game.year }}
       <button @click="deleteItem(game.id)">x</button>
     </li>
   </ol>
