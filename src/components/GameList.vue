@@ -11,7 +11,7 @@
 export default {
   name: "game-list",
   props: {
-    games: [],
+    games: Array,
   },
   methods: {
     deleteItem: function (id) {
