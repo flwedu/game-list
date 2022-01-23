@@ -2,13 +2,7 @@
   <div id="app">
     <img src="./assets/game.png" alt="joystick logo" />
     <Info v-bind:infoData="appData" />
-    <ol>
-      <game-list
-        v-for="elem in gameList"
-        v-bind:key="elem.id"
-        v-bind:game="elem"
-      ></game-list>
-    </ol>
+    <game-list v-bind:games="gameList" />
     <!-- 
       Criando um componente de formulário e ouvindo seu evento "addNewGame"
       Também pode ser representado por @addNewGame="addNewGame"
