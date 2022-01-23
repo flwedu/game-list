@@ -1,5 +1,8 @@
 <template>
-  <li>{{ game.name }}, released in {{ game.year }}</li>
+  <li>
+    {{ game.name }}, released in {{ game.year }}
+    <button @click="deleteItem(game.id)">x</button>
+  </li>
 </template>
 
 <script>
@@ -10,6 +13,11 @@ export default {
       id: Number,
       name: String,
       year: Number,
+    },
+  },
+  methods: {
+    deleteItem: function (id) {
+      this.$emit("deleteItem", id);
     },
   },
 };
