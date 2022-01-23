@@ -23,4 +23,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+button {
+  color: #5f5f5f;
+  background: transparent;
+  border: transparent;
+}
+button:hover {
+  font: bolder;
+  color: red;
+}
+</style>
